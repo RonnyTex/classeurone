@@ -1,15 +1,15 @@
 <?php
 
 
-namespace Ronos\Application\Usecases\Admin;
+namespace Application\Usecases\Admin;
 
-use Ronos\Domain\User\UsersRepositoryInterface;
-use Ronos\Domain\User\Exceptions\UserNotFoundException;
-use Ronos\Application\DTO\User\UpdateUserOutput;
-use Ronos\Domain\User\VO\Email;
-use Ronos\Domain\User\VO\Password;
-use Ronos\Domain\User\VO\CommonName;
-use Ronos\Domain\User\User;
+use Domain\User\UsersRepositoryInterface;
+use Domain\User\Exceptions\UserNotFoundException;
+use Application\DTO\User\UpdateUserOutput;
+use Domain\User\VO\Email;
+use Domain\User\VO\Password;
+use Domain\User\VO\CommonName;
+use Domain\User\User;
 
 class UpdateUserUsecase {
 

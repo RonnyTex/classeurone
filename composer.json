@@ -1,0 +1,18 @@
+{
+    "name": "ronal/ronos.app",
+    "autoload": {
+        "psr-4": {
+            "Domain\\": "src/Domain",
+            "Infrastructure\\": "src/Infrastructure",
+            "Interface\\": "src/Interface",
+            "Application\\": "src/Application"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ronald",
+            "email": "ronald.barloy@outlook.com"
+        }
+    ],
+    "require": {}
+}

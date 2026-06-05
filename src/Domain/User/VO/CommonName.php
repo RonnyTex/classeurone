@@ -1,9 +1,9 @@
 <?php
 
-namespace Ronos\Domain\User\VO;
+namespace Domain\User\VO;
 
-use Ronos\Domain\Exceptions\InvalidFieldException;
-use Ronos\Domain\Exceptions\EmptyFieldException;
+use Domain\Exceptions\InvalidFieldException;
+use Domain\Exceptions\EmptyFieldException;
 
 class CommonName {
 

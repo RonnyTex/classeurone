@@ -1,9 +1,9 @@
 <?php
 
-namespace Ronos\Application\Usecases\Auth;
+namespace Application\Usecases\Auth;
 
-use Ronos\Application\DTO\Auth\LogoutUserOutput;
-use Ronos\Domain\Auth\AuthInterface;
+use Application\DTO\Auth\LogoutUserOutput;
+use Domain\Auth\AuthInterface;
 
 
 class LogoutUserUsecase {

@@ -1,14 +1,14 @@
 <?php
 
-namespace Ronos\Infrastructure\Framework\Http\Router;
+namespace Infrastructure\Framework\Http\Router;
 
-use Ronos\Infrastructure\Framework\Container\ContainerInterface;
-use Ronos\Infrastructure\Framework\Http\Controllers\AbstractController;
-use Ronos\Infrastructure\Framework\Http\Router\Route;
-use Ronos\Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
-use Ronos\Infrastructure\Framework\Http\Foundation\HttpRequest;
-use Ronos\Infrastructure\Framework\Http\Foundation\Response\HtmlResponse;
-use Ronos\Infrastructure\Framework\Security\TokenGenerator;
+use Infrastructure\Framework\Container\ContainerInterface;
+use Infrastructure\Framework\Http\Controllers\AbstractController;
+use Infrastructure\Framework\Http\Router\Route;
+use Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
+use Infrastructure\Framework\Http\Foundation\HttpRequest;
+use Infrastructure\Framework\Http\Foundation\Response\HtmlResponse;
+use Infrastructure\Framework\Security\TokenGenerator;
 
 class Router {
     

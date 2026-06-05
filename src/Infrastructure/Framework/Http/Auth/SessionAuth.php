@@ -1,10 +1,10 @@
 <?php 
 
-namespace Ronos\Infrastructure\Framework\Http\Auth;
+namespace Infrastructure\Framework\Http\Auth;
 
-use Ronos\Infrastructure\Framework\Http\Foundation\Session\SessionInterface;
-use Ronos\Infrastructure\Framework\Http\Auth\AuthInterface;
-use Ronos\Infrastructure\Framework\Security\TokenGenerator;
+use Infrastructure\Framework\Http\Foundation\Session\SessionInterface;
+use Infrastructure\Framework\Http\Auth\AuthInterface;
+use Infrastructure\Framework\Security\TokenGenerator;
 
 class SessionAuth implements AuthInterface {
 

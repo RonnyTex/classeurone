@@ -1,15 +1,15 @@
 <?php
 
-namespace Ronos\Infrastructure\Persistance\Json;
+namespace Infrastructure\Persistance\Json;
 
-use Ronos\Infrastructure\Persistance\Json\JsonBaseRepository;
-use Ronos\Infrastructure\Persistance\Json\JsonFileManager;
-use Ronos\Domain\User\Exceptions\EmailAlreadyExistsException;
-use Ronos\Domain\User\UsersRepositoryInterface;
-use Ronos\Domain\User\VO\Email;
-use Ronos\Domain\User\VO\Password;
-use Ronos\Domain\User\VO\CommonName;
-use Ronos\Domain\User\User;
+use Infrastructure\Persistance\Json\JsonBaseRepository;
+use Infrastructure\Persistance\Json\JsonFileManager;
+use Domain\User\Exceptions\EmailAlreadyExistsException;
+use Domain\User\UsersRepositoryInterface;
+use Domain\User\VO\Email;
+use Domain\User\VO\Password;
+use Domain\User\VO\CommonName;
+use Domain\User\User;
 
 class JsonUsersRepository extends JsonBaseRepository implements UsersRepositoryInterface {
 

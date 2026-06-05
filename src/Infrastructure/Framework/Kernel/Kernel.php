@@ -1,13 +1,13 @@
 <?php
 
-namespace Ronos\Infrastructure\Framework\Kernel;
+namespace Infrastructure\Framework\Kernel;
 
-use Ronos\Infrastructure\Framework\Container\ContainerInterface;
-use Ronos\Infrastructure\Framework\Container\Container;
-use Ronos\Infrastructure\Framework\Http\Router\Router;
-use Ronos\Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
-use Ronos\Infrastructure\Framework\Http\Foundation\Response\HtmlResponse;
-use Ronos\Infrastructure\Framework\Http\Foundation\HttpRequest;
+use Infrastructure\Framework\Container\ContainerInterface;
+use Infrastructure\Framework\Container\Container;
+use Infrastructure\Framework\Http\Router\Router;
+use Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
+use Infrastructure\Framework\Http\Foundation\Response\HtmlResponse;
+use Infrastructure\Framework\Http\Foundation\HttpRequest;
 
 
 class Kernel {

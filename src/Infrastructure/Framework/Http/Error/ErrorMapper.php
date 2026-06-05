@@ -1,6 +1,6 @@
 <?php
 
-namespace Ronos\Infrastructure\Framework\Http\Error;
+namespace Infrastructure\Framework\Http\Error;
 
 class ErrorMapper {
 

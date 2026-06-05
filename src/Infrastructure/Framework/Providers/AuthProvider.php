@@ -1,14 +1,14 @@
 <?php
 
-namespace Ronos\Infrastructure\Framework\Providers;
+namespace Infrastructure\Framework\Providers;
 
-use Ronos\Infrastructure\Framework\Kernel\ProviderInterface;
-use Ronos\Infrastructure\Framework\Container\ContainerInterface;
-use Ronos\Infrastructure\Framework\Http\Foundation\Session\SessionInterface;
-use Ronos\Infrastructure\Framework\Http\Foundation\Session\Session;
-use Ronos\Infrastructure\Framework\Http\Middlewares\AuthMiddleware;
-use Ronos\Infrastructure\Framework\Http\Auth\SessionAuth;
-use Ronos\Infrastructure\Framework\Http\Auth\AuthInterface;
+use Infrastructure\Framework\Kernel\ProviderInterface;
+use Infrastructure\Framework\Container\ContainerInterface;
+use Infrastructure\Framework\Http\Foundation\Session\SessionInterface;
+use Infrastructure\Framework\Http\Foundation\Session\Session;
+use Infrastructure\Framework\Http\Middlewares\AuthMiddleware;
+use Infrastructure\Framework\Http\Auth\SessionAuth;
+use Infrastructure\Framework\Http\Auth\AuthInterface;
 
 class AuthProvider implements ProviderInterface {
 

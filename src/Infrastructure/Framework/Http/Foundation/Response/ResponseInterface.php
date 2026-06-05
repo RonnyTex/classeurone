@@ -1,6 +1,6 @@
 <?php
 
-namespace Ronos\Infrastructure\Framework\Http\Foundation\Response;
+namespace Infrastructure\Framework\Http\Foundation\Response;
 
 interface ResponseInterface {
 

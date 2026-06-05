@@ -1,6 +1,6 @@
 <?php
 
-namespace Ronos\Domain\Auth;
+namespace Domain\Auth;
 
 interface AuthInterface {
 

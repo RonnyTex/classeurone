@@ -1,11 +1,11 @@
 <?php
 
-namespace Ronos\Interface\Providers;
+namespace Interface\Providers;
 
-use Ronos\Infrastructure\Framework\Kernel\ProviderInterface;
-use Ronos\Infrastructure\Framework\Container\ContainerInterface;
-use Ronos\Infrastructure\Persistance\Json\JsonUsersRepository;
-use Ronos\Domain\User\UsersRepositoryInterface;
+use Infrastructure\Framework\Kernel\ProviderInterface;
+use Infrastructure\Framework\Container\ContainerInterface;
+use Infrastructure\Persistance\Json\JsonUsersRepository;
+use Domain\User\UsersRepositoryInterface;
 
 class EntityProvider implements ProviderInterface {
 

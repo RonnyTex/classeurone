@@ -1,6 +1,6 @@
 <?php
 
-namespace Ronos\Application\DTO\User;
+namespace Application\DTO\User;
 
 class CreateUserInput {
 

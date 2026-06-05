@@ -1,8 +1,8 @@
 <?php
 
-namespace Ronos\Infrastructure\Framework\Http\Foundation\Session;
+namespace Infrastructure\Framework\Http\Foundation\Session;
 
-use Ronos\Infrastructure\Framework\Http\Foundation\Session\SessionInterface;
+use Infrastructure\Framework\Http\Foundation\Session\SessionInterface;
 
 class Session implements SessionInterface {
 

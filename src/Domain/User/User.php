@@ -1,11 +1,11 @@
 <?php
 
-namespace Ronos\Domain\User;
+namespace Domain\User;
 
-use Ronos\Domain\Exceptions\EmptyFieldException;
-use Ronos\Domain\User\VO\Email;
-use Ronos\Domain\User\VO\Password;
-use Ronos\Domain\User\VO\CommonName;
+use Domain\Exceptions\EmptyFieldException;
+use Domain\User\VO\Email;
+use Domain\User\VO\Password;
+use Domain\User\VO\CommonName;
 
 class User {
 

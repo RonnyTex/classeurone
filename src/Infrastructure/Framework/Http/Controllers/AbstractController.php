@@ -1,14 +1,14 @@
 <?php
 
-namespace Ronos\Infrastructure\Framework\Http\Controllers;
+namespace Infrastructure\Framework\Http\Controllers;
 
-use Ronos\Infrastructure\Framework\Container\ContainerInterface;
-use Ronos\Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
-use Ronos\Infrastructure\Framework\Http\Foundation\Response\RedirectResponse;
-use Ronos\Infrastructure\Framework\Http\Foundation\Response\HtmlResponse;
-use Ronos\Infrastructure\Framework\Http\Foundation\Session\SessionInterface;
-use Ronos\Infrastructure\Framework\Http\Auth\AuthInterface;
-use Ronos\Infrastructure\Framework\View\ViewInterface;
+use Infrastructure\Framework\Container\ContainerInterface;
+use Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
+use Infrastructure\Framework\Http\Foundation\Response\RedirectResponse;
+use Infrastructure\Framework\Http\Foundation\Response\HtmlResponse;
+use Infrastructure\Framework\Http\Foundation\Session\SessionInterface;
+use Infrastructure\Framework\Http\Auth\AuthInterface;
+use Infrastructure\Framework\View\ViewInterface;
 
 abstract class AbstractController {
 

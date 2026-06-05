@@ -1,9 +1,9 @@
 <?php
 
-namespace Ronos\Interface\Http\Controllers\Pages;
+namespace Interface\Http\Controllers\Pages;
 
-use Ronos\Infrastructure\Framework\Http\Controllers\AbstractController;
-use Ronos\Application\Usecases\Admin\ShowAllUsersUsecase;
+use Infrastructure\Framework\Http\Controllers\AbstractController;
+use Application\Usecases\Admin\ShowAllUsersUsecase;
 
 class AccountsPageController extends AbstractController {
 

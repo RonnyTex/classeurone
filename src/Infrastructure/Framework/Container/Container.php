@@ -1,8 +1,8 @@
 <?php
 
-namespace Ronos\Infrastructure\Framework\Container;
+namespace Infrastructure\Framework\Container;
 
-use Ronos\Infrastructure\Framework\Container\ContainerInterface;
+use Infrastructure\Framework\Container\ContainerInterface;
 
 class Container implements ContainerInterface {
 

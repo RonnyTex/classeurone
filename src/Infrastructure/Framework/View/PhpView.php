@@ -1,8 +1,8 @@
 <?php
 
-namespace Ronos\Infrastructure\Framework\View;
+namespace Infrastructure\Framework\View;
 
-use Ronos\Infrastructure\Framework\View\ViewInterface;
+use Infrastructure\Framework\View\ViewInterface;
 
 class PhpView implements ViewInterface {
 

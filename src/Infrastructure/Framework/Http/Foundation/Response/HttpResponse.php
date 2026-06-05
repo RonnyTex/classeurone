@@ -1,8 +1,8 @@
 <?php
 
-namespace Ronos\Infrastructure\Framework\Http\Foundation\Response;
+namespace Infrastructure\Framework\Http\Foundation\Response;
 
-use Ronos\Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
+use Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
 
 class HttpResponse implements ResponseInterface {
 

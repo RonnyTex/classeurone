@@ -1,6 +1,6 @@
 <?php 
 
-namespace Ronos\Infrastructure\Framework\Http\Router;
+namespace Infrastructure\Framework\Http\Router;
 
 class Route {
 

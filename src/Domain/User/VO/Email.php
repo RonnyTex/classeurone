@@ -1,9 +1,9 @@
 <?php
 
-namespace Ronos\Domain\User\VO;
+namespace Domain\User\VO;
 
-use Ronos\Domain\User\Exceptions\InvalidEmailException;
-use Ronos\Domain\Exceptions\EmptyFieldException;
+use Domain\User\Exceptions\InvalidEmailException;
+use Domain\Exceptions\EmptyFieldException;
 
 class Email {
 

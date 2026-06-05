@@ -1,12 +1,12 @@
 <?php
 
-namespace Ronos\Infrastructure\Framework\Providers;
+namespace Infrastructure\Framework\Providers;
 
-use Ronos\Infrastructure\Framework\Kernel\ProviderInterface;
-use Ronos\Infrastructure\Framework\Container\ContainerInterface;
-use Ronos\Infrastructure\Framework\Http\Middlewares\CsrfMiddleware;
-use Ronos\Infrastructure\Framework\Http\Middlewares\TrailingSlashMiddleware;
-use Ronos\Infrastructure\Framework\Http\Foundation\Session\SessionInterface;
+use Infrastructure\Framework\Kernel\ProviderInterface;
+use Infrastructure\Framework\Container\ContainerInterface;
+use Infrastructure\Framework\Http\Middlewares\CsrfMiddleware;
+use Infrastructure\Framework\Http\Middlewares\TrailingSlashMiddleware;
+use Infrastructure\Framework\Http\Foundation\Session\SessionInterface;
 
 class MiddlewaresProvider implements ProviderInterface {
 

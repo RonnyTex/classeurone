@@ -1,6 +1,6 @@
 <?php
 
-namespace Ronos\Infrastructure\Framework\Config;
+namespace Infrastructure\Framework\Config;
 
 class Config {
 
@@ -13,11 +13,11 @@ class Config {
 
     public function get(string $key): mixed
     {
-        if(!isset($this->settigs[$key])){
-            throw new Exceptions("La clé $key n'existe pas dans la configuration.");
+        if(!isset($this->settings[$key])){
+            throw new \Exception("La clé $key n'existe pas dans la configuration.");
         }
        
-        return $this->key;
+        return $this->settings[$key];
     }
 
 }

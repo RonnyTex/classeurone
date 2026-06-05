@@ -1,9 +1,9 @@
 <?php
 
-namespace Ronos\Application\Usecases\Admin;
+namespace Application\Usecases\Admin;
 
-use Ronos\Domain\User\UsersRepositoryInterface;
-use Ronos\Domain\User\User;
+use Domain\User\UsersRepositoryInterface;
+use Domain\User\User;
 
 class ShowUserUsecase {
 

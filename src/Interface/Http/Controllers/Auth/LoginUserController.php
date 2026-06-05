@@ -1,12 +1,12 @@
 <?php
 
-namespace Ronos\Interface\Http\Controllers\Auth;
+namespace Interface\Http\Controllers\Auth;
 
-use Ronos\Infrastructure\Framework\Http\Controllers\AbstractController;
-use Ronos\Infrastructure\Framework\Http\Foundation\HttpRequest;
-use Ronos\Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
-use Ronos\Infrastructure\Framework\Http\Error\ErrorMapper;
-use Ronos\Application\Usecases\Auth\LoginUserUsecase;
+use Infrastructure\Framework\Http\Controllers\AbstractController;
+use Infrastructure\Framework\Http\Foundation\HttpRequest;
+use Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
+use Infrastructure\Framework\Http\Error\ErrorMapper;
+use Application\Usecases\Auth\LoginUserUsecase;
 
 class LoginUserController extends AbstractController {
 

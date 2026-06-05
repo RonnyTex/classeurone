@@ -1,6 +1,6 @@
 <?php
 
-namespace Ronos\Infrastructure\Framework\View;
+namespace Infrastructure\Framework\View;
 
 interface ViewInterface {
 

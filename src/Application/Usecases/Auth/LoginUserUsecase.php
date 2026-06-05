@@ -1,12 +1,12 @@
 <?php
 
-namespace Ronos\Application\Usecases\Auth;
+namespace Application\Usecases\Auth;
 
-use Ronos\Domain\User\UsersRepositoryInterface;
-use Ronos\Domain\Auth\AuthInterface;
-use Ronos\Domain\User\VO\Password;
-use Ronos\Domain\User\Exceptions\InvalidCredentialException;
-use Ronos\Application\DTO\Auth\LoginUserOutput;
+use Domain\User\UsersRepositoryInterface;
+use Domain\Auth\AuthInterface;
+use Domain\User\VO\Password;
+use Domain\User\Exceptions\InvalidCredentialException;
+use Application\DTO\Auth\LoginUserOutput;
 
 
 class LoginUserUsecase {

@@ -1,7 +1,7 @@
 <?php
 
-namespace Ronos\Domain\User;
-use Ronos\Domain\User\User;
+namespace Domain\User;
+use Domain\User\User;
 
 interface UsersRepositoryInterface {
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace Ronos\Infrastructure\Framework\Http\Middlewares;
+namespace Infrastructure\Framework\Http\Middlewares;
 
-use Ronos\Infrastructure\Framework\Http\Foundation\HttpRequest;
-use Ronos\Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
-use Ronos\Infrastructure\Framework\Http\Foundation\Response\RedirectResponse;
-use Ronos\Infrastructure\Framework\Http\Foundation\Response\JsonResponse;
-use Ronos\Infrastructure\Framework\Http\Foundation\Session\SessionInterface;
-use Ronos\Infrastructure\Framework\Http\Auth\AuthInterface;
+use Infrastructure\Framework\Http\Foundation\HttpRequest;
+use Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
+use Infrastructure\Framework\Http\Foundation\Response\RedirectResponse;
+use Infrastructure\Framework\Http\Foundation\Response\JsonResponse;
+use Infrastructure\Framework\Http\Foundation\Session\SessionInterface;
+use Infrastructure\Framework\Http\Auth\AuthInterface;
 
 class AuthMiddleware {
 

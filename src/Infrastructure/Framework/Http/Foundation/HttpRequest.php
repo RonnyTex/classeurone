@@ -1,6 +1,6 @@
 <?php
 
-namespace Ronos\Infrastructure\Framework\Http\Foundation;
+namespace Infrastructure\Framework\Http\Foundation;
 
 class HttpRequest {
 

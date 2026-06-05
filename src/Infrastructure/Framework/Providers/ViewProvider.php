@@ -1,11 +1,11 @@
 <?php
 
-namespace Ronos\Infrastructure\Framework\Providers;
+namespace Infrastructure\Framework\Providers;
 
-use Ronos\Infrastructure\Framework\Kernel\ProviderInterface;
-use Ronos\Infrastructure\Framework\Container\ContainerInterface;
-use Ronos\Infrastructure\Framework\View\ViewInterface;
-use Ronos\Infrastructure\Framework\View\PhpView;
+use Infrastructure\Framework\Kernel\ProviderInterface;
+use Infrastructure\Framework\Container\ContainerInterface;
+use Infrastructure\Framework\View\ViewInterface;
+use Infrastructure\Framework\View\PhpView;
 
 class ViewProvider implements ProviderInterface {
 

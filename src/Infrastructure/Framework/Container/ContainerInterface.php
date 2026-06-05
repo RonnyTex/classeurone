@@ -1,6 +1,6 @@
 <?php
 
-namespace Ronos\Infrastructure\Framework\Container;
+namespace Infrastructure\Framework\Container;
 
 interface ContainerInterface {
 

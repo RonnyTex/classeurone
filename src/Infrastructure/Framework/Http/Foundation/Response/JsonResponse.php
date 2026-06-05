@@ -1,8 +1,8 @@
 <?php
 
-namespace Ronos\Infrastructure\Framework\Http\Foundation\Response;
+namespace Infrastructure\Framework\Http\Foundation\Response;
 
-use Ronos\Infrastructure\Framework\Http\Foundation\Response\HttpResponse;
+use Infrastructure\Framework\Http\Foundation\Response\HttpResponse;
 
 class JsonResponse extends HttpResponse {
 

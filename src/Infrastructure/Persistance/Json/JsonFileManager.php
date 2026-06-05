@@ -1,6 +1,6 @@
 <?php
 
-namespace Ronos\Infrastructure\Persistance\Json;
+namespace Infrastructure\Persistance\Json;
 
 class JsonFileManager {
 

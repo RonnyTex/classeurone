@@ -1,6 +1,6 @@
 <?php
 
-namespace Ronos\Infrastructure\Framework\Http\Foundation\Session;
+namespace Infrastructure\Framework\Http\Foundation\Session;
 
 interface SessionInterface {
 

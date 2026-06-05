@@ -1,6 +1,6 @@
 <?php
 
-namespace Ronos\Infrastructure\Framework\Security;
+namespace Infrastructure\Framework\Security;
 
 class TokenGenerator {
 

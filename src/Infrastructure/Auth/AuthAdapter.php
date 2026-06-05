@@ -1,9 +1,9 @@
 <?php
 
-namespace Ronos\Infrastructure\Auth;
+namespace Infrastructure\Auth;
 
-use Ronos\Domain\Auth\AuthInterface;
-use Ronos\Infrastructure\Framework\Http\Auth\SessionAuth;
+use Domain\Auth\AuthInterface;
+use Infrastructure\Framework\Http\Auth\SessionAuth;
 
 class AuthAdapter implements AuthInterface {
 

@@ -1,21 +1,21 @@
 <?php
 
-namespace Ronos\Application\Usecases\User;
+namespace Application\Usecases\User;
 
-use Ronos\Domain\User\UsersRepositoryInterface;
-use Ronos\Domain\User\Exceptions\EmailAlreadyExistsException;
-use Ronos\Domain\User\Exceptions\InvalidEmailException;
-use Ronos\Domain\User\Exceptions\InvalidPasswordException;
-use Ronos\Domain\Exceptions\EmptyFieldException;
-use Ronos\Domain\Exceptions\InvalidFieldException;
-use Ronos\Domain\User\VO\Email;
-use Ronos\Domain\User\VO\Password;
-use Ronos\Domain\User\VO\CommonName;
-use Ronos\Domain\User\User;
-use Ronos\Domain\Auth\AuthInterface;
-use Ronos\Infrastructure\Framework\Security\TokenGenerator;
-use Ronos\Application\DTO\User\CreateUserOutput;
-use Ronos\Application\DTO\User\CreateUserInput;
+use Domain\User\UsersRepositoryInterface;
+use Domain\User\Exceptions\EmailAlreadyExistsException;
+use Domain\User\Exceptions\InvalidEmailException;
+use Domain\User\Exceptions\InvalidPasswordException;
+use Domain\Exceptions\EmptyFieldException;
+use Domain\Exceptions\InvalidFieldException;
+use Domain\User\VO\Email;
+use Domain\User\VO\Password;
+use Domain\User\VO\CommonName;
+use Domain\User\User;
+use Domain\Auth\AuthInterface;
+use Infrastructure\Framework\Security\TokenGenerator;
+use Application\DTO\User\CreateUserOutput;
+use Application\DTO\User\CreateUserInput;
 
 class CreateUserUsecase {
 

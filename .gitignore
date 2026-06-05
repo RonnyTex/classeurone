@@ -1,0 +1,77 @@
+# =========================
+# Dépendances Composer
+# =========================
+/vendor/
+/composer.lock
+
+# =========================
+# Variables d'environnement
+# =========================
+.env
+.env.local
+.env.*.local
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+storage/logs/
+data/
+
+# =========================
+# Cache / fichiers temporaires
+# =========================
+/tmp/
+/temp/
+/cache/
+/storage/framework/cache/
+/storage/framework/sessions/
+/storage/framework/views/
+
+# =========================
+# IDE / éditeurs
+# =========================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# =========================
+# Système
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# PHPUnit
+# =========================
+phpunit.xml
+.phpunit.result.cache
+
+# =========================
+# PHPUnit coverage
+# =========================
+coverage/
+.clover.xml
+
+# =========================
+# Uploads (optionnel selon projet)
+# =========================
+/public/uploads/
+/uploads/
+
+# =========================
+# Docker (si utilisé)
+# =========================
+docker-compose.override.yml
+
+# =========================
+# PHPStorm
+# =========================
+/.phpstorm.meta.php
+
+# =========================
+# Autres fichiers sensibles
+# =========================
+auth.json

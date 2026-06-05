@@ -1,17 +1,16 @@
 <?php
 
-
-use Ronos\Interface\Http\Controllers\Pages\LandingPageController;
-use Ronos\Interface\Http\Controllers\Pages\RegisterPageController;
-use Ronos\Interface\Http\Controllers\User\CreateUserController;
-use Ronos\Interface\Http\Controllers\Pages\LoginPageController;
-use Ronos\Interface\Http\Controllers\Auth\LoginUserController;
-use Ronos\Interface\Http\Controllers\Auth\LogoutUserController;
-use Ronos\Interface\Http\Controllers\Pages\AppPageController;
-use Ronos\Interface\Http\Controllers\Pages\AccountsPageController;
-use Ronos\Interface\Http\Controllers\Pages\EditAccountPageController;
-use Ronos\Interface\Http\Controllers\User\UpdateUserController;
-use Ronos\Interface\Http\Controllers\User\DeleteUserController;
+use Interface\Http\Controllers\Pages\LandingPageController;
+use Interface\Http\Controllers\Pages\RegisterPageController;
+use Interface\Http\Controllers\User\CreateUserController;
+use Interface\Http\Controllers\Pages\LoginPageController;
+use Interface\Http\Controllers\Auth\LoginUserController;
+use Interface\Http\Controllers\Auth\LogoutUserController;
+use Interface\Http\Controllers\Pages\AppPageController;
+use Interface\Http\Controllers\Pages\AccountsPageController;
+use Interface\Http\Controllers\Pages\EditAccountPageController;
+use Interface\Http\Controllers\User\UpdateUserController;
+use Interface\Http\Controllers\User\DeleteUserController;
 
 
 $router->get('/', [LandingPageController::class ], 'home');

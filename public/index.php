@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . '/../autoload.php';
+require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-use Ronos\Infrastructure\Framework\Kernel\Kernel;
+use Infrastructure\Framework\Kernel\Kernel;
 
 $app = new Kernel();
 

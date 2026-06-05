@@ -1,13 +1,13 @@
 <?php
 
-namespace Ronos\Interface\Http\Controllers\User;
+namespace Interface\Http\Controllers\User;
 
-use Ronos\Infrastructure\Framework\Http\Controllers\AbstractController;
-use Ronos\Infrastructure\Framework\Http\Foundation\HttpRequest;
-use Ronos\Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
-use Ronos\Infrastructure\Framework\Http\Error\ErrorMapper;
-use Ronos\Application\Usecases\User\CreateUserUsecase;
-use Ronos\Application\DTO\User\CreateUserInput;
+use Infrastructure\Framework\Http\Controllers\AbstractController;
+use Infrastructure\Framework\Http\Foundation\HttpRequest;
+use Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
+use Infrastructure\Framework\Http\Error\ErrorMapper;
+use Application\Usecases\User\CreateUserUsecase;
+use Application\DTO\User\CreateUserInput;
 
 class CreateUserController extends AbstractController {
 

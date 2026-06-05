@@ -1,9 +1,9 @@
 <?php
 
-namespace Ronos\Domain\User\VO;
+namespace Domain\User\VO;
 
-use Ronos\Domain\Exceptions\EmptyFieldException;
-use Ronos\Domain\User\Exceptions\InvalidPasswordException;
+use Domain\Exceptions\EmptyFieldException;
+use Domain\User\Exceptions\InvalidPasswordException;
 
 class Password {
 

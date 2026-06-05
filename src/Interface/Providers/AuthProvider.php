@@ -1,13 +1,13 @@
 <?php
 
-namespace Ronos\Interface\Providers;
+namespace Interface\Providers;
 
-use Ronos\Infrastructure\Framework\Kernel\ProviderInterface;
-use Ronos\Infrastructure\Framework\Container\ContainerInterface;
-use Ronos\Infrastructure\Framework\Http\Foundation\Session\SessionInterface;
-use Ronos\Infrastructure\Framework\Http\Auth\SessionAuth;
-use Ronos\Infrastructure\Auth\AuthAdapter;
-use Ronos\Domain\Auth\AuthInterface;
+use Infrastructure\Framework\Kernel\ProviderInterface;
+use Infrastructure\Framework\Container\ContainerInterface;
+use Infrastructure\Framework\Http\Foundation\Session\SessionInterface;
+use Infrastructure\Framework\Http\Auth\SessionAuth;
+use Infrastructure\Auth\AuthAdapter;
+use Domain\Auth\AuthInterface;
 
 class AuthProvider implements ProviderInterface {
 

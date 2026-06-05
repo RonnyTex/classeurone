@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Ronos\Application\Usecases\Admin;
+namespace Application\Usecases\Admin;
 
-use Ronos\Domain\User\UsersRepositoryInterface;
-use Ronos\Domain\User\Exceptions\UserNotFoundException;
-use Ronos\Application\DTO\User\DeleteUserOutput;
+use Domain\User\UsersRepositoryInterface;
+use Domain\User\Exceptions\UserNotFoundException;
+use Application\DTO\User\DeleteUserOutput;
 
 
 class DeleteUserUsecase {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Ronos\Infrastructure\Persistance\Json;
+namespace Infrastructure\Persistance\Json;
 
-use Ronos\Infrastructure\Persistance\Json\JsonFileManager;
+use Infrastructure\Persistance\Json\JsonFileManager;
 
 abstract class JsonBaseRepository {
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace Ronos\Interface\Http\Controllers\User;
+namespace Interface\Http\Controllers\User;
 
-use Ronos\Infrastructure\Framework\Http\Controllers\AbstractController;
-use Ronos\Infrastructure\Framework\Http\Foundation\HttpRequest;
-use Ronos\Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
-use Ronos\Infrastructure\Framework\Http\Foundation\Session\SessionInterface;
-use Ronos\Infrastructure\Framework\Http\Foundation\Response\HtmlResponse;
-use Ronos\Application\Usecases\Admin\UpdateUserUsecase;
+use Infrastructure\Framework\Http\Controllers\AbstractController;
+use Infrastructure\Framework\Http\Foundation\HttpRequest;
+use Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
+use Infrastructure\Framework\Http\Foundation\Session\SessionInterface;
+use Infrastructure\Framework\Http\Foundation\Response\HtmlResponse;
+use Application\Usecases\Admin\UpdateUserUsecase;
 
 class UpdateUserController extends AbstractController {
 

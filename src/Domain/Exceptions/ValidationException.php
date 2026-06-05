@@ -1,6 +1,6 @@
 <?php
 
-namespace Ronos\Domain\Exceptions;
+namespace Domain\Exceptions;
 
 class ValidationException extends \Exception {
 

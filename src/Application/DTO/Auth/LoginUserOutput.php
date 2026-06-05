@@ -1,6 +1,6 @@
 <?php
 
-namespace Ronos\Application\DTO\Auth;
+namespace Application\DTO\Auth;
 
 class LoginUserOutput {
 

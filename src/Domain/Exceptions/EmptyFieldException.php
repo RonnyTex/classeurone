@@ -1,7 +1,7 @@
 <?php
 
-namespace Ronos\Domain\Exceptions;
-use Ronos\Domain\Exceptions\ValidationException;
+namespace Domain\Exceptions;
+use Domain\Exceptions\ValidationException;
 
 class EmptyFieldException extends ValidationException {
 

@@ -1,7 +1,7 @@
 <?php
 
-namespace Ronos\Domain\User\Exceptions;
-use Ronos\Domain\Exceptions\ValidationException;
+namespace Domain\User\Exceptions;
+use Domain\Exceptions\ValidationException;
 
 class UserNotFoundException extends ValidationException {
 

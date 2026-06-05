@@ -1,8 +1,8 @@
 <?php
 
-namespace Ronos\Infrastructure\Framework\Kernel;
+namespace Infrastructure\Framework\Kernel;
 
-use Ronos\Infrastructure\Framework\Container\ContainerInterface;
+use Infrastructure\Framework\Container\ContainerInterface;
 
 interface ProviderInterface {
 

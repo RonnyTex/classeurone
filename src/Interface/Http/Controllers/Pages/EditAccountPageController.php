@@ -1,11 +1,11 @@
 <?php
 
-namespace Ronos\Interface\Http\Controllers\Pages;
+namespace Interface\Http\Controllers\Pages;
 
-use Ronos\Infrastructure\Framework\Http\Controllers\AbstractController;
-use Ronos\Infrastructure\Framework\Http\Foundation\HttpRequest;
-use Ronos\Application\Usecases\Admin\ShowUserUsecase;
-use Ronos\Domain\User\User;
+use Infrastructure\Framework\Http\Controllers\AbstractController;
+use Infrastructure\Framework\Http\Foundation\HttpRequest;
+use Application\Usecases\Admin\ShowUserUsecase;
+use Domain\User\User;
 
 class EditAccountPageController extends AbstractController {
 
