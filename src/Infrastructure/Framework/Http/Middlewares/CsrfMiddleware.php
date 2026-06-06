@@ -2,12 +2,14 @@
 
 namespace Infrastructure\Framework\Http\Middlewares;
 
-use Infrastructure\Framework\Http\Foundation\HttpRequest;
-use Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
 use Infrastructure\Framework\Http\Foundation\Session\SessionInterface;
 use Infrastructure\Framework\Http\Foundation\Response\JsonResponse;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Server\MiddlewareInterface;
+use Psr\Http\Server\RequestHandlerInterface;
 
-class CsrfMiddleware {
+class CsrfMiddleware implements MiddlewareInterface {
 
     public function __construct
     (
@@ -18,18 +20,18 @@ class CsrfMiddleware {
     /**
      * Vérifie les token CSRF;
      */
-    public function handle(HttpRequest $request): ?ResponseInterface
+    public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {   
 
         if($request->getMethod() === 'POST'){
 
-            if(!$request->getBody()['_csrf'] || !hash_equals($this->session->get('csrf.token'), $request->getBody()['_csrf'])){
+            if(!$request->getParsedBody()['_csrf'] || !hash_equals($this->session->get('csrf.token'), $request->getParsedBody()['_csrf'])){
                 return new JsonResponse(['error' => "CSRF"], 403);
             }
             $token = $this->session->get('csrf.token');
             unset($token);
         }
 
-        return null;
+        return $handler->handle($request);
     }
 }

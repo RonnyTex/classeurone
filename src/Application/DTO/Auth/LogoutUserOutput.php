@@ -8,6 +8,7 @@ class LogoutUserOutput {
     (
         private bool $success,
         private ?\Throwable $errorType = null,
+        private array $errors = []
     )
     { }
     
@@ -19,5 +20,10 @@ class LogoutUserOutput {
     public function getErrorType(): \Throwable 
     {
         return $this->errorType;
+    }
+
+    public function getErrors(): array 
+    {
+        return $this->errors;
     }
 }

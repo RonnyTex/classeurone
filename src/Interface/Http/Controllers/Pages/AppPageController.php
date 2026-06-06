@@ -3,7 +3,8 @@
 namespace Interface\Http\Controllers\Pages;
 
 use Infrastructure\Framework\Http\Controllers\AbstractController;
-use Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
+
+use Psr\Http\Message\ResponseInterface;
 
 
 class AppPageController extends AbstractController {

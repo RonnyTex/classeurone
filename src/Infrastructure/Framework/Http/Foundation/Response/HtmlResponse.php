@@ -2,9 +2,9 @@
 
 namespace Infrastructure\Framework\Http\Foundation\Response;
 
-use Infrastructure\Framework\Http\Foundation\Response\HttpResponse;
+use GuzzleHttp\Psr7\Response;
 
-class HtmlResponse extends HttpResponse {
+class HtmlResponse extends Response {
 
     public function __construct(string $content, int $status = 200)
     {

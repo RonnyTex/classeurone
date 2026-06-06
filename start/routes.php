@@ -21,18 +21,6 @@ $router->get('/nouvelle-ecole', [RegisterPageController::class ], 'register');
 $router->post('/nouvelle-ecole', [CreateUserController::class ]);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 $router->get('/logout', [LogoutUserController::class], 'logout');
 
 $router->get('/app', [AppPageController::class ])->middleware('auth');

@@ -14,5 +14,10 @@
             "email": "ronald.barloy@outlook.com"
         }
     ],
-    "require": {}
+    "require": {
+        "psr/http-server-middleware": "^1.0",
+        "psr/http-message": "^2.0",
+        "guzzlehttp/psr7": "^2.11",
+        "http-interop/response-sender": "^1.1"
+    }
 }

@@ -19,7 +19,7 @@ class Route {
         # Convertit /product/{id} en regex: #^/product/(?P<id>[^/]+)$#
         $this->regex = $this->compilePath($path);
     }
-
+    
     public function match(string $method, string $uri): false | array
     {
         if($method !== $this->method){

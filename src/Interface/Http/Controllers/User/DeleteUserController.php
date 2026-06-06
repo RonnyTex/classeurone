@@ -3,11 +3,9 @@
 namespace Interface\Http\Controllers\User;
 
 use Infrastructure\Framework\Http\Controllers\AbstractController;
-use Infrastructure\Framework\Http\Foundation\HttpRequest;
-use Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
-use Infrastructure\Framework\Http\Foundation\Session\SessionInterface;
-use Infrastructure\Framework\Http\Foundation\Response\HtmlResponse;
 use Application\Usecases\Admin\DeleteUserUsecase;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
 
 class DeleteUserController extends AbstractController {
 
@@ -17,9 +15,9 @@ class DeleteUserController extends AbstractController {
     )
     { }
 
-    public function __invoke(HttpRequest $request): ResponseInterface
+    public function __invoke(ServerRequestInterface $request): ResponseInterface
     {
-        $userId = $request->getParams()['id'];
+        $userId = $request->getAttribute('id');
      
         $output = $this->uc->execute($userId);
    

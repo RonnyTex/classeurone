@@ -2,11 +2,13 @@
 
 namespace Infrastructure\Framework\Http\Middlewares;
 
-use Infrastructure\Framework\Http\Foundation\HttpRequest;
-use Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
 use Infrastructure\Framework\Http\Foundation\Response\RedirectResponse;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Server\MiddlewareInterface;
+use Psr\Http\Server\RequestHandlerInterface;
 
-class TrailingSlashMiddleware {
+class TrailingSlashMiddleware implements MiddlewareInterface {
 
     public function __construct()
     { }
@@ -14,11 +16,11 @@ class TrailingSlashMiddleware {
     /**
      * Vérifie les / en fin d'url et redirige sans
      */
-    public function handle(HttpRequest $request): ?ResponseInterface
+    public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {   
-        if($request->getUri() !== '/' && $request->getUri()[-1] === '/'){
+        if($request->getUri()->getPath() !== '/' && $request->getUri()->getPath()[-1] === '/'){
             return new RedirectResponse(substr($request->getUri(), 0, -1));
         }
-        return null;
+        return $handler->handle($request);
     }
 }

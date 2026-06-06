@@ -11,4 +11,8 @@ interface AuthInterface {
     public function isAuthenticated(): bool;
 
     public function getUser(): ?string;
+
+    public function refreshExpiry(int $time): void;
+
+    public function getSessionLifetime(): int;
 }

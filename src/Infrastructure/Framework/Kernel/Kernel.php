@@ -2,18 +2,22 @@
 
 namespace Infrastructure\Framework\Kernel;
 
+use GuzzleHttp\Psr7\ServerRequest;
 use Infrastructure\Framework\Container\ContainerInterface;
 use Infrastructure\Framework\Container\Container;
 use Infrastructure\Framework\Http\Router\Router;
-use Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
 use Infrastructure\Framework\Http\Foundation\Response\HtmlResponse;
-use Infrastructure\Framework\Http\Foundation\HttpRequest;
+use Infrastructure\Framework\Http\Middlewares\MiddlewaresPipeline;
+use Infrastructure\Framework\Http\Router\RouterHandler;
+use Psr\Http\Message\ResponseInterface;
 
 
 class Kernel {
 
     private array $providers = [];
     private array $middlewares = [];
+    private ?ContainerInterface $container = null;
+    private ?Router $router = null;
 
     /**
      * Enregistre un middleware global
@@ -37,18 +41,13 @@ class Kernel {
     {
         try {
             $this->boot();
-            $request = HttpRequest::capture();
+            $request = ServerRequest::fromGlobals();
 
-            # Exécution des middlewares globals
-            foreach($this->middlewares as $mw){
-                $middleware = $this->container->get($mw);
-                $response = $middleware->handle($request);
-                if($response !== null){
-                    return $response;
-                }
-            }
+            $finalHandler = new RouterHandler($this->router);
+            $pipeline = new MiddlewaresPipeline($this->container, $this->middlewares, $finalHandler);
 
-            $response = $this->router->dispatch($request);
+            $response = $pipeline->handle($request);
+            
         } catch (\Throwable $th) {
             $response = new HtmlResponse($th->getMessage(), 500);
         }

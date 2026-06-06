@@ -3,11 +3,10 @@
 namespace Interface\Http\Controllers\User;
 
 use Infrastructure\Framework\Http\Controllers\AbstractController;
-use Infrastructure\Framework\Http\Foundation\HttpRequest;
-use Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
 use Infrastructure\Framework\Http\Foundation\Session\SessionInterface;
-use Infrastructure\Framework\Http\Foundation\Response\HtmlResponse;
 use Application\Usecases\Admin\UpdateUserUsecase;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
 
 class UpdateUserController extends AbstractController {
 
@@ -17,10 +16,10 @@ class UpdateUserController extends AbstractController {
         private SessionInterface $session
     ) { }
 
-    public function __invoke(HttpRequest $request): ResponseInterface
+    public function __invoke(ServerRequestInterface $request): ResponseInterface
     {
-        $userId = $request->getParams()['id'];
-        $body = $request->getBody();
+        $userId = $request->getAttribute('id');
+        $body = $request->getParsedBody();
 
 
         $output = $this->uc->execute($userId, $body);

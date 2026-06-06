@@ -3,19 +3,20 @@
 namespace Interface\Http\Controllers\Auth;
 
 use Infrastructure\Framework\Http\Controllers\AbstractController;
-use Infrastructure\Framework\Http\Foundation\HttpRequest;
-use Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
 use Infrastructure\Framework\Http\Error\ErrorMapper;
 use Application\Usecases\Auth\LoginUserUsecase;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
 
 class LoginUserController extends AbstractController {
 
     public function __construct(private LoginUserUsecase $usecase)
     { }
 
-    public function __invoke(HttpRequest $request): ResponseInterface
+    public function __invoke(ServerRequestInterface $request): ResponseInterface
     {   
-        $body = $request->getBody();
+        $body = $request->getParsedBody();
+   
         $email = $body['email'];
         $password = $body['psw'];
        

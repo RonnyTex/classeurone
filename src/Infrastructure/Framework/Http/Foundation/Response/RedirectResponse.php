@@ -2,9 +2,9 @@
 
 namespace Infrastructure\Framework\Http\Foundation\Response;
 
-use Infrastructure\Framework\Http\Foundation\Response\HttpResponse;
+use GuzzleHttp\Psr7\Response;
 
-class RedirectResponse extends HttpResponse
+class RedirectResponse extends Response
 {
     public function __construct(string $url, int $status = 302)
     {

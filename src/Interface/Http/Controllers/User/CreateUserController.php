@@ -3,20 +3,20 @@
 namespace Interface\Http\Controllers\User;
 
 use Infrastructure\Framework\Http\Controllers\AbstractController;
-use Infrastructure\Framework\Http\Foundation\HttpRequest;
-use Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
 use Infrastructure\Framework\Http\Error\ErrorMapper;
 use Application\Usecases\User\CreateUserUsecase;
 use Application\DTO\User\CreateUserInput;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
 
 class CreateUserController extends AbstractController {
 
     public function __construct(private CreateUserUsecase $usecase)
     { }
 
-    public function __invoke(HttpRequest $request): ResponseInterface
+    public function __invoke(ServerRequestInterface $request): ResponseInterface
     {
-        $body = $request->getBody();
+        $body = $request->getParsedBody();
 
         $input = new CreateUserInput(
             $body['firstname'],

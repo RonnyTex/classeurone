@@ -4,11 +4,13 @@ namespace Infrastructure\Framework\Http\Router;
 
 use Infrastructure\Framework\Container\ContainerInterface;
 use Infrastructure\Framework\Http\Controllers\AbstractController;
+use Infrastructure\Framework\Http\Controllers\ControllerHandler;
 use Infrastructure\Framework\Http\Router\Route;
-use Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
-use Infrastructure\Framework\Http\Foundation\HttpRequest;
 use Infrastructure\Framework\Http\Foundation\Response\HtmlResponse;
+use Infrastructure\Framework\Http\Middlewares\MiddlewaresPipeline;
 use Infrastructure\Framework\Security\TokenGenerator;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
 
 class Router {
     
@@ -44,25 +46,13 @@ class Router {
         return $route;
     }
 
-    public function dispatch(HttpRequest $request): ResponseInterface
+    public function dispatch(ServerRequestInterface $request): ResponseInterface
     {
         foreach($this->routes as $route){
 
-            $params = $route->match($request->getMethod(), $request->getUri());
+            $params = $route->match($request->getMethod(), $request->getUri()->getPath());
               
             if($params !== false){
-
-                # Stocker les params dans la request
-                $request->setParams($params);
-                
-                # Exécution des middlewares
-                foreach($route->getMiddlewares() as $mw){
-                    $middleware = $this->container->get($mw);
-                    $response = $middleware->handle($request);
-                    if($response !== null){
-                        return $response;
-                    }
-                }
 
                 [$controller, $method] = $route->getHandler();
 
@@ -74,16 +64,13 @@ class Router {
                     $instance->setContainer($this->container);
                 }
 
-                # Gestion des controllers invocables avec la méthode __invoke
-                if($method === null){
-                    if(!is_callable($instance)) {
-                        throw new \Exception("Le controller $controller n'est pas callable. Une méthode est attentude.");
-                    }
-                        
-                    return $instance($request);
-                }
+                $finalHandler = new ControllerHandler($instance, $method);
 
-                return $instance->$method($request); 
+                $pipeline = new MiddlewaresPipeline($this->container, $route->getMiddlewares(), $finalHandler);
+
+
+                return $pipeline->handle($request);
+             
             }
         }
 

@@ -3,12 +3,12 @@
 namespace Infrastructure\Framework\Http\Controllers;
 
 use Infrastructure\Framework\Container\ContainerInterface;
-use Infrastructure\Framework\Http\Foundation\Response\ResponseInterface;
 use Infrastructure\Framework\Http\Foundation\Response\RedirectResponse;
 use Infrastructure\Framework\Http\Foundation\Response\HtmlResponse;
 use Infrastructure\Framework\Http\Foundation\Session\SessionInterface;
 use Infrastructure\Framework\Http\Auth\AuthInterface;
 use Infrastructure\Framework\View\ViewInterface;
+use Psr\Http\Message\ResponseInterface;
 
 abstract class AbstractController {
 
