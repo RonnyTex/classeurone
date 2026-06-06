@@ -1,6 +1,6 @@
 <?php
 
-namespace Domain\User\VO;
+namespace Domain\VO;
 
 use Domain\User\Exceptions\InvalidEmailException;
 use Domain\Exceptions\EmptyFieldException;

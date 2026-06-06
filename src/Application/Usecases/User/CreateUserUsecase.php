@@ -3,12 +3,8 @@
 namespace Application\Usecases\User;
 
 use Domain\User\UsersRepositoryInterface;
-use Domain\User\Exceptions\EmailAlreadyExistsException;
-use Domain\User\Exceptions\InvalidEmailException;
-use Domain\User\Exceptions\InvalidPasswordException;
-use Domain\Exceptions\EmptyFieldException;
 use Domain\Exceptions\InvalidFieldException;
-use Domain\User\VO\Email;
+use Domain\VO\Email;
 use Domain\User\VO\Password;
 use Domain\User\VO\CommonName;
 use Domain\User\User;

@@ -73,6 +73,10 @@ class Kernel {
             $instance->register($containerInterface);
         }
 
+    
+        // chargement de Env
+        $env = $this->container->get('env');
+        $env->load();
 
         // chargement des configurations
         $config = $this->container->get(ConfigInterface::class);

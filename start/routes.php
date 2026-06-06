@@ -8,9 +8,20 @@ use Interface\Http\Controllers\Auth\LoginUserController;
 use Interface\Http\Controllers\Auth\LogoutUserController;
 use Interface\Http\Controllers\Pages\AppPageController;
 use Interface\Http\Controllers\Pages\AccountsPageController;
+use Interface\Http\Controllers\Pages\CreateRolePageController;
+use Interface\Http\Controllers\Pages\CreateSchoolTypePageController;
 use Interface\Http\Controllers\Pages\EditAccountPageController;
+use Interface\Http\Controllers\School\CreateTypeController;
+use Interface\Http\Controllers\User\CreateRoleController;
 use Interface\Http\Controllers\User\UpdateUserController;
 use Interface\Http\Controllers\User\DeleteUserController;
+
+
+$router->get('/role/add', [CreateRolePageController::class]);
+$router->post('/role/add', [CreateRoleController::class]);
+
+$router->get('/school/type/add', [CreateSchoolTypePageController::class]);
+$router->post('/school/type/add', [CreateTypeController::class]);
 
 
 $router->get('/', [LandingPageController::class ], 'home');

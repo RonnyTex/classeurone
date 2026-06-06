@@ -2,8 +2,7 @@
 
 namespace Domain\User;
 
-use Domain\Exceptions\EmptyFieldException;
-use Domain\User\VO\Email;
+use Domain\VO\Email;
 use Domain\User\VO\Password;
 use Domain\User\VO\CommonName;
 

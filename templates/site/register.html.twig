@@ -1,66 +1,87 @@
 {{include('header.html.twig')}}
 
 <h1>Créer votre établissement</h1>
-<h2>Nous allons commencer par vous identifier</h2>
     <div class="form">
         <form action="" method="post">
-            <input type="hidden" name="_csrf" value="<?= $csrf ?>">
-            <div class="field">
-                <label for="lastname">Nom</label>
-                <input type="text" name="lastname" id="lastname">
+            <input type="hidden" name="_csrf" value={{csrf}}>
+            <div class="mb-3">
+                <label for="lastname" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="lastname" name="lastname">
             </div>
-            <div class="field">
-                <label for="firstname">Prénom</label>
-                <input type="text" name="firstname" id="firstname">
+            <div class="mb-3">
+                <label for="firstname" class="form-label">Prénom</label>
+                <input type="text" class="form-control" id="firstname" name="firstname">
             </div>
-            <div class="field">
-                <label for="email">Email professionel</label>
-                <input type="email" name="email" id="email" placeholder="hello@monecole.be">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email professionel</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email">
             </div>
-            <div class="field">
-                <label for="function">Fonction</label>
-                <select name="function" id="function">
-                    <option value="Directeur / Directrice">Directeur / Directrice</option>
-                    <option value="Sous-directeur / Sous-directrice">Sous-directeur / Sous-directrice</option>
-                    <option value="Responsable administratif">Responsable administratif</option>
-                    <option value="">Responsable informatique (IT)</option>
-                    <option value="">Responsable pédagogique</option>
-                    <option value="">Responsable RH</option>
-                    <option value="">Secrétaire de direction</option>
-                    <option value="">Coordinateur / Coordinatrice</option>
-                    <option value="">Gestionnaire de l'établissement</option>
-                    <option value="">Membre du pouvoir organistateur (PO)</option>
+            <div class="mb-3">
+                <select class="form-select" aria-label="fonction" name="role">
+                    <option selected>Fonction</option>
+                    {% for role in roles %}
+                        <option value={{role.id}}>{{role.name}}</option> 
+                    {% endfor %}
                 </select>
             </div>
-            <div class="footer">
-                <button class="btn btn-primary">Continuer</button>
+            <div class="mb-3">
+                <label for="schoolName" class="form-label">Nom de l'école</label>
+                <input type="text" class="form-control" id="schoolName" name="school_name">
             </div>
-            <div class="field">
-                <label for="school-name">Nom de l'école</label>
-                <input type="text" name="school-name" id="school-name">
-            </div>
-            <div class="field">
-                <label for="type">Type d'établissement</label>
-                <select name="school-type" id="type">
-                    <option value="">public</option>
+            <div class="mb-3">
+                <select class="form-select" aria-label="type" name="school_type">
+                    <option selected>Type d'établissement</option>
+                    {% for type in types %}
+                        <option value={{type.id}}>{{type.name}}</option> 
+                    {% endfor %}
                 </select>
             </div>
-            <div class="field">
-                <label for="school-country">Pays</label>
-                <input type="text" name="school-country" id="school-country">
+            <div class="mb-3">
+                <label for="country" class="form-label">Pays</label>
+                <input type="text" class="form-control" id="country" name="country">
             </div>
-            <div class="field">
-                <label for="school-city">Ville</label>
-                <input type="text" name="school-city" id="school-city">
+            <div class="mb-3">
+                <label for="city" class="form-label">Ville</label>
+                <input type="text" class="form-control" id="city" name="city">
             </div>
-            <div class="field">
-                <label for="school-road">Rue</label>
-                <input type="text" name="school-road" id="school-road">
+            <div class="mb-3">
+                <label for="road" class="form-label">Rue</label>
+                <input type="text" class="form-control" id="road" name="road">
             </div>
-            <div class="field">
-                <label for="school-number">Numéro</label>
-                <input type="number" name="school-number" id="school-number">
+            <div class="mb-3">
+                <label for="number" class="form-label">Numéro</label>
+                <input type="number" class="form-control" id="number" name="number">
             </div>
+            <p>Combien d'éleves comporte votre établissement ?</p>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1" name="school_radio_capacity">
+                <label class="form-check-label" for="radioDefault1">< 100</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2" name="school_radio_capacity">
+                <label class="form-check-label" for="radioDefault2">100 - 300</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault3" name="school_radio_capacity">
+                <label class="form-check-label" for="radioDefault3">300 - 500</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault4" name="school_radio_capacity">
+                <label class="form-check-label" for="radioDefault4">500 - 1000</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault5" name="school_radio_capacity">
+                <label class="form-check-label" for="radioDefault5">1000 - 2000</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault6" name="school_radio_capacity">
+                <label class="form-check-label" for="radioDefault6">> 2000</label>
+            </div>
+            <div class="mb-3">
+                <label for="schoolCapacity" class="form-label">Préciser</label>
+                <input type="number" class="form-control" id="schoolCapacity" name="school_capacity">
+            </div>
+            <button type="submit" class="btn btn-primary">Créer mon école</button>
         </form>
     </div>
 
