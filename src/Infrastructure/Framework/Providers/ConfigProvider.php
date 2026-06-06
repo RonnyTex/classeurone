@@ -2,21 +2,20 @@
 
 namespace Infrastructure\Framework\Providers;
 
+use Infrastructure\Framework\Config\ConfigInterface;
 use Infrastructure\Framework\Kernel\ProviderInterface;
 use Infrastructure\Framework\Container\ContainerInterface;
-use Infrastructure\Framework\View\ViewInterface;
-use Infrastructure\Framework\View\TwigRenderer;
+use Infrastructure\Framework\Config\Config;
 
-class ViewProvider implements ProviderInterface {
+class ConfigProvider implements ProviderInterface {
 
     public function register(ContainerInterface $c)
     {
-        $c->set(ViewInterface::class, fn($c) => new TwigRenderer($c));
+        $c->set(ConfigInterface::class, fn() => new Config());
     }
 
     public function boot(ContainerInterface $c)
     {
 
     }
-
 }

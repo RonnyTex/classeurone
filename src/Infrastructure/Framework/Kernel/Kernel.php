@@ -3,6 +3,7 @@
 namespace Infrastructure\Framework\Kernel;
 
 use GuzzleHttp\Psr7\ServerRequest;
+use Infrastructure\Framework\Config\ConfigInterface;
 use Infrastructure\Framework\Container\ContainerInterface;
 use Infrastructure\Framework\Container\Container;
 use Infrastructure\Framework\Http\Router\Router;
@@ -11,13 +12,13 @@ use Infrastructure\Framework\Http\Middlewares\MiddlewaresPipeline;
 use Infrastructure\Framework\Http\Router\RouterHandler;
 use Psr\Http\Message\ResponseInterface;
 
-
 class Kernel {
 
     private array $providers = [];
     private array $middlewares = [];
     private ?ContainerInterface $container = null;
     private ?Router $router = null;
+    private string $routesPath = "";
 
     /**
      * Enregistre un middleware global
@@ -36,12 +37,17 @@ class Kernel {
         $this->providers[] = $provider;
     }
 
+    public function setRoutesPath(string $path): void
+    {
+        $this->routesPath = $path;
+    }
+
     // Démarre l'application
-    public function run(): ResponseInterface
+    public function run(?ServerRequest $request = null): ResponseInterface
     {
         try {
             $this->boot();
-            $request = ServerRequest::fromGlobals();
+            $request = $request ?? ServerRequest::fromGlobals();
 
             $finalHandler = new RouterHandler($this->router);
             $pipeline = new MiddlewaresPipeline($this->container, $this->middlewares, $finalHandler);
@@ -67,10 +73,17 @@ class Kernel {
             $instance->register($containerInterface);
         }
 
+
+        // chargement des configurations
+        $config = $this->container->get(ConfigInterface::class);
+        $settings = $config->load();
+        $config->setSettings($settings ?? []);
+
+
         // Chargement des routes
         $router = new Router($containerInterface);
         $this->router = $router;
-        require dirname(__DIR__, 4) . '/start/routes.php';
+        require $this->routesPath ?: ROOT_PATH . '/start/routes.php';
 
     }
 

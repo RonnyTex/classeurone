@@ -8,6 +8,11 @@
             "Application\\": "src/Application"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "Ronald",
@@ -18,6 +23,12 @@
         "psr/http-server-middleware": "^1.0",
         "psr/http-message": "^2.0",
         "guzzlehttp/psr7": "^2.11",
-        "http-interop/response-sender": "^1.1"
+        "http-interop/response-sender": "^1.1",
+        "twig/twig": "^3.27",
+        "symfony/yaml": "^8.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "13",
+        "symfony/var-dumper": "^8.1"
     }
 }
